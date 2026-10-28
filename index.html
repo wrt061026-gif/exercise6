@@ -3,119 +3,162 @@
   <head>
     <meta charset="UTF-8">
     <title>Exercise 6: Banh Mi, menus, and layout</title>
-    
- <!-- These are the embed codes for the two google fonts in our document, we will learn about google fonts next week -->
+
+    <!-- These are the embed codes for the two google fonts in our document, we will learn about google fonts next week -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ledger&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ledger&display=swap" rel="stylesheet">
+
     <style>
-* {
-    box-sizing: border-box;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.grid-item {
-    background-color: #FFF8ED;
-    padding: 25px;
-    border: 2px solid #D8B89C;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.grid-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.grid-item h2 {
-    color: #6C3D2A;
-    font-size: 24px;
-}
-
-.grid-item p {
-    font-size: 16px;
-    line-height: 1.7;
-}
       body {
-      font-family: "Ledger", serif;
-      font-weight: 400;
-      font-style: normal;  
+        font-family: "Ledger", serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #F4F0DC;
+        color: #30401F;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 25px;
+        line-height: 1.6;
       }
-      
-      h1 , h2 , ul {
-      font-family: "Inter Tight", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 30px;
       }
-      
-      h1 {
-      font-weight: 600;
+
+      .grid-item {
+        background-color: #ADD04C;
+        padding: 25px;
+        border: 2px solid #7D8B1D;
+        border-radius: 12px;
+        text-align: center;
       }
-      
-      h2 {
-      font-weight: 500;
+
+      .grid-item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
       }
-      
+
+      .grid-item h2 {
+        color: #6C3D2A;
+        font-size: 24px;
+      }
+
+      .grid-item p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      footer {
+        background-color: #405A25;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 40px;
+        border-radius: 10px;
+      }
+
+      h1,
+      h2,
       ul {
-      font-weight: 700;
+        font-family: "Inter Tight", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
       }
-      
+
+      h1 {
+        text-align: center;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-weight: 500;
+      }
+
+      ul {
+        font-weight: 700;
+      }
+
+      nav {
+        background-color: #405A25;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 25px;
+      }
+
+      nav a {
+        display: block;
+        padding: 12px 15px;
+        color: white;
+        text-decoration: none;
+        border-radius: 2px;
+      }
+
+      nav a:hover {
+        background-color: #ADD04C;
+        color: #263516;
+      }
     </style>
   </head>
   <body>
-
     <h1>Greg’s Banh Mi</h1>
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Menu</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
     <h1>At Greg’s Banh Mi, we’re serving up the perfect marriage of French and Vietnamese culinary traditions&mdash;crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavours that'll make your taste buds sing.</h1>
 
     <div class="container">
 
-  <div class="grid-item">
-    <img src="banh-mi.jpg" alt="Classic Pork Banh Mi sandwich">
-    <h2>Classic Pork Banh Mi</h2>
-    <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of p&acirc;t&eacute; on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
-  </div>
+      <div class="grid-item">
+        <img src="banh-mi.jpg" alt="Classic Pork Banh Mi sandwich">
+        <h2>Classic Pork Banh Mi</h2>
+        <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of p&acirc;t&eacute; on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
+      </div>
 
-  <div class="grid-item">
-    <img src="banh-mi.jpg" alt="Lemongrass Chicken Banh Mi sandwich">
-    <h2>Lemongrass Chicken Banh Mi</h2>
-    <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalape&ntilde;os, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
-  </div>
+      <div class="grid-item">
+        <img src="banh-mi.jpg" alt="Lemongrass Chicken Banh Mi sandwich">
+        <h2>Lemongrass Chicken Banh Mi</h2>
+        <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalape&ntilde;os, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
+      </div>
 
-  <div class="grid-item">
-    <img src="banh-mi.jpg" alt="Tofu Banh Mi sandwich">
-    <h2>Tofu Banh Mi</h2>
-    <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
-  </div>
+      <div class="grid-item">
+        <img src="banh-mi.jpg" alt="Tofu Banh Mi sandwich">
+        <h2>Tofu Banh Mi</h2>
+        <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
+      </div>
 
-  <div class="grid-item">
-    <img src="banh-mi.jpg" alt="Five-Spice Beef Banh Mi sandwich">
-    <h2>Five-Spice Beef Banh Mi</h2>
-    <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
-  </div>
-
-</div>
+      <div class="grid-item">
+        <img src="banh-mi.jpg" alt="Five-Spice Beef Banh Mi sandwich">
+        <h2>Five-Spice Beef Banh Mi</h2>
+        <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
+      </div>
+    </div>
     <footer>
       <p>Because life’s too short for boring sandwiches. Greg’s got you covered&mdash;one crispy baguette at a time.</p>
     </footer>
